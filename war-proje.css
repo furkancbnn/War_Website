@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+/* Ortak Alan */
+
+body{
+    color: #fff;
+    font-family:'Courier New', Courier, monospace ;
+
+}
+
+section{
+    height: 150vh;
+    background-color: black;
+}
+
+
+/* Üst Taraf */
+header{
+    display: flex;
+    justify-content: space-around;
+    gap: 150px;
+    align-items: center;
+    padding-top: 30px;
+    position: fixed;
+    top: 0%;
+}
+header img{
+    width: 150px;
+}
+header nav{
+    display: flex;
+    gap: 50px;
+}
+header nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+    text-shadow: 2px 2px 10px black;
+} 
+header nav a:hover{
+    color: crimson;
+    text-shadow: 2px 2px 10px crimson ;
+}
+
+/* Karşılama Ekranı */
+#welcome-screen{
+    background-image: url(war_images/war-images/horse-background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+
+.welcome-text{
+    cursor: pointer;
+    width: 90vw;
+}
+
+.welcome-text h1{
+    font-size: 80px;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px black;
+}
+
+.welcome-text p{
+    max-width: 700px;
+    margin: 90px auto;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px 10px black;
+}
+
+.welcome-screen img{
+    width: 200px;
+}
+
+
+/* Hakkında */
+#sec-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding: 0 50px;
+}
+
+.left-side{
+    max-width: 600px;
+    
+}
+
+.left-side h1{
+    font-size: 75px;
+    line-height: 80px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid white;
+}
+
+.left-side p{
+    margin-top: 30px;
+    
+}
+.left-side p span{
+    border-bottom: 3px solid crimson;
+}
+
+
+.right-side{
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.right-side img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    box-shadow: 1px 2px 5px 2px gray;
+}
+
+
+
+/* 1500px altında */
+@media (max-width: 1500px) {
+    .right-side{
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+/* 1100px altında */
+@media (max-width: 1100px) {
+    #sec-1{
+        flex-direction: column;
+    }
+
+    .right-side img{
+        margin-top: -100px;
+        padding: 70px;
+    }
+}
+
+
+
+/* GEREKSİNİMLER ALANI */
+
+#sec-2{
+    padding-top: 200px;
+    background-image: radial-gradient(
+        circle, 
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.9) 40%
+    ), 
+        url(war_images/war-images/atlı.jpg);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 140px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading h5{
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.heading h1{
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.boxes{
+    width: 620px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    border: 2px solid white;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.box:last-child{
+    width: 600px;
+}
+
+.box h1{
+    color: crimson;
+}
+
+
+
+
+#sec-3{
+    background-image: url(war_images/war-images/sec-3.png);
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    gap: 50%;
+
+    top: 30%;
+    position: relative;
+    padding: 17% 10% 0 10%;
+}
+
+#sec-3 .left{
+    width: 30%;
+    padding: 50px;
+    position: absolute;
+    top: 37%;
+    left: 130px;
+    border: 3px solid grey;
+    box-shadow: 2px 1px 2px 1px white;
+    border-radius: 10%;
+    transition: all 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec-3 .left button{
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    box-shadow: 1px 1px 2px 1px white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#sec-3 .left button:hover{
+    transform: scale(1.1);
+}
+
+#sec-3 .left p{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#sec-3 .left:hover{
+    transform: scale(1.1);
+    cursor: pointer;    
+}
+#sec-3 .right{
+    border-radius: 10%;
+    padding: 50px;
+    gap: 50px;
+    position: absolute;
+    top: 15%;
+    left: 55%;
+}
+
+#sec-3 .right .person-h1{
+    color: rgb(189, 22, 22);
+}
+
+.card1, .card2, .card3{
+    box-shadow: 2px 1px 2px 1px white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid gray;
+    transition: all 0.3s;
+}
+
+.card1:hover, .card2:hover, .card3:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+
+/* 1100px altında */
+@media (max-width: 1500px) {
+    #sec-3 .card2{
+        margin-left: 150px;
+        margin-right: 20px;
+    }
+    #sec-3 .car3{
+        margin-right: 50px;
+    }
+    #sec-3{
+        padding-left: 30px;
+    }
+    #sec-3 .right{
+        margin-top: 50%;
+        margin-left: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    #sec-3 .left{
+        margin-right: 30px;
+    }
+    .card p{
+        margin-left: 50%;
+    }
+}
+
+
+
+
