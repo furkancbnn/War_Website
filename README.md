@@ -6,4 +6,4 @@
 <h2> Kullanılan Projeler <h2>
 HTML ve CSS ile desteklenmiştir...
 
-![](war-proje-gif.webm)
+![](war-proje-gif.gif)
